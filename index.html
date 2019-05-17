@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>shop-cart</title>
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/layout.css">
+</head>
+<body>
+<div id="app">
+    <mini-cart ref="miniCart" v-bind:cart-list="cartList"></mini-cart>
+    <section class="commodity-wrapper container" v-on:click="handleClick">
+        <div class="row">
+            <div class="picture-wrapper col-lg-6 text-center">
+                <img src="./img/classic-tee.jpg" alt="goods-picture" width="80%">
+            </div>
+            <div class="des-wrapper col-lg-6">
+                <div class="des-title-wrapper black-color">
+                    <h1 class="des-title">Classic Tree</h1>
+                </div>
+                <div class="prices-wrapper">$75.00</div>
+                <div class="description-wrapper gray-color">
+                    Dolor sit amet,consectetur adipiscing elit.Haec et tu ita posuisti,et verba vestr asunt.Quod autem
+                    ratione actum est,id officium
+                    appellamus dolor sit amet,consectetur adipiscing elit.Haec et tu ita posuisti.et verba vestra
+                    sunt.Quod
+                    autem ratione actum
+                    est,id officium appellamus.
+                </div>
+
+                <size-ctrl v-bind:cart-list="cartList"></size-ctrl>
+
+            </div>
+        </div>
+    </section>
+</div>
+<script src="./js/vue.min.js"></script>
+<script src="./js/size-ctrl.js"></script>
+<script src="./js/mini-cart.js"></script>
+<script src="./js/shop-cart.js"></script>
+</body>
+</html>
